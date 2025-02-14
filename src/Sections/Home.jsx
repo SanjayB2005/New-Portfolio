@@ -10,11 +10,11 @@ const Home = () => {
         <p className="text-xl text-white mb-12">Web Developer & Designer</p>
         
         <div className="flex justify-center space-x-6 mb-12">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://linkedin.com/in/sanjaybaskaran5" target="_blank" rel="noopener noreferrer" 
              className="text-white hover:text-primary transition">
             <i className='bx bxl-linkedin text-3xl'></i>
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
+          <a href="https://github.com/SanjayB2005" target="_blank" rel="noopener noreferrer" 
              className="text-white hover:text-primary transition">
             <i className='bx bxl-github text-3xl'></i>
           </a>

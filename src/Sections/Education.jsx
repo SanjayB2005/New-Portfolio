@@ -1,4 +1,6 @@
 import React from 'react';
+import sboa from "../assets/images/sboa.jpg"
+import srm from "../assets/images/srm-university-ramapuram-campus-chennai.jpg"
 
 const Education = () => {
   return (
@@ -10,12 +12,12 @@ const Education = () => {
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition duration-300">
             <img 
-              src="/assets/sboa.jpg" 
+              src={sboa} 
               alt="SBOA School" 
               className="w-full h-48 object-cover rounded-lg mb-4"
             />
             <h3 className="text-xl font-bold text-white mb-2">
-              S.B.O.A. School
+                  S.B.O.A. Matriculation & hr. Sec. School
             </h3>
             <p className="text-gray-300">Higher Secondary Certificate (HSC)</p>
             <p className="text-primary">Grade: 83%</p>
@@ -23,7 +25,7 @@ const Education = () => {
 
           <div className="bg-gray-800 rounded-lg p-6 transform hover:scale-105 transition duration-300">
             <img 
-              src="/assets/srm.jpg" 
+              src={srm} 
               alt="SRM Institute" 
               className="w-full h-48 object-cover rounded-lg mb-4"
             />

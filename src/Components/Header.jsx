@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import resume from '../assets/Sanjay_Baskaran_Resume.pdf';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +8,12 @@ const Header = () => {
     <header className="fixed w-full bg-secondary shadow-lg z-50">
       <nav className="container mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
-          <div className="text-white text-xl font-bold">Portfolio</div>
+          <div className="text-white text-xl  font-bold flex items-end justify-center gap-10 ">
+            <a href='#' className='hover:text-primary transition'>Portfolio</a>
+            
+            
+          </div>
+          
           
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -30,6 +36,18 @@ const Header = () => {
             <a href="#education" className="text-white hover:text-primary transition">Education</a>
             <a href="#portfolio" className="text-white hover:text-primary transition">Portfolio</a>
             <a href="#contact" className="text-white hover:text-primary transition">Contact</a>
+            <a 
+              href={resume} 
+              className="text-white transition px-4 py-2 rounded-md relative 
+                before:absolute before:inset-0 before:p-[2px] before:rounded-md
+                before:bg-gradient-to-r before:from-blue-500 before:via-purple-500 before:to-pink-500
+                before:-z-10 before:hover:opacity-90
+                inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </a>
           </div>
         </div>
 
@@ -42,6 +60,18 @@ const Header = () => {
             <a href="#education" className="block text-white py-2">Education</a>
             <a href="#portfolio" className="block text-white py-2">Portfolio</a>
             <a href="#contact" className="block text-white py-2">Contact</a>
+            <a 
+              href={resume} 
+              className="text-white hover:text-primary transition px-4 py-2 rounded-md relative 
+                before:absolute before:inset-0 before:p-[2px] before:rounded-md
+                before:bg-gradient-to-r before:from-blue-500 before:via-purple-500 before:to-pink-500
+                before:-z-10 before:hover:opacity-90
+                inline-block"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Resume
+            </a>
           </div>
         )}
       </nav>

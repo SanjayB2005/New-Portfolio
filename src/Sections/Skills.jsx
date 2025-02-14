@@ -2,14 +2,15 @@ import React from 'react';
 
 const Skills = () => {
   const skills = [
-    { name: 'HTML5', level: '95%', icon: 'bx bxl-html5' },
+    { name: 'HTML5', level: '90%', icon: 'bx bxl-html5' },
     { name: 'CSS3', level: '90%', icon: 'bx bxl-css3' },
-    { name: 'JavaScript', level: '85%', icon: 'bx bxl-javascript' },
-    { name: 'React', level: '80%', icon: 'bx bxl-react' },
-    { name: 'Python', level: '75%', icon: 'bx bxl-python' },
-    { name: 'C', level: '70%', icon: 'bx bx-code-alt' },
-    { name: 'C++', level: '70%', icon: 'bx bx-code-curly' },
-    { name: 'Tailwind CSS', level: '85%', icon: 'bx bxl-tailwind-css' },
+    { name: 'JavaScript', level: '60%', icon: 'bx bxl-javascript' },
+    { name: 'React', level: '70%', icon: 'bx bxl-react' },
+    { name: 'Tailwind CSS', level: '65%', icon: 'bx bxl-tailwind-css' },
+    { name: 'Python', level: '50%', icon: 'bx bxl-python' },
+    { name: 'C', level: '50%', icon: 'bx bx-code-alt' },
+    { name: 'C++', level: '50%', icon: 'bx bx-code-curly' },
+    
   ];
 
   return (

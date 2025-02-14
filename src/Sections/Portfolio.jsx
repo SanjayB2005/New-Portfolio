@@ -1,4 +1,8 @@
 import React from 'react';
+import shopnext from "../assets/images/ShopNext.png";
+import nike from "../assets/images/nike.png";
+import booksky from "../assets/images/Booksky.jpeg";
+import mbbsglobe from "../assets/images/MbbsLandingPage.png";
 
 const Portfolio = () => {
   const projects = [
@@ -6,37 +10,39 @@ const Portfolio = () => {
       id: 1,
       title: "ShopNext",
       description: "E-commerce website with product browsing and checkout",
-      image: "/assets/shopnext.png",
-      link: "https://shopnext.demo"
+      image: shopnext,
+      link: "https://shop-next-wine.vercel.app/"
     },
+
     {
       id: 2,
-      title: "Nike Store",
-      description: "Nike-themed e-commerce platform",
-      image: "/assets/nike.png",
-      link: "https://nikestore.demo"
+      title: "Mbbsglobe",
+      description: "MBBS Admissions Platform Landing Page",
+      image: mbbsglobe,
+      link: "https://mbbs-landing-page-phi.vercel.app/"
     },
     {
       id: 3,
-      title: "Booksky",
-      description: "E-Book Management System",
-      image: "/assets/booksky.png",
-      link: "https://booksky.demo"
+      title: "Nike Store",
+      description: "Nike-themed e-commerce platform",
+      image: nike,
+      link: "https://nikeshopsite.vercel.app/"
     },
     {
       id: 4,
-      title: "Mbbsglobe",
-      description: "MBBS Admissions Platform",
-      image: "/assets/mbbsglobe.png",
-      link: "https://mbbsglobe.demo"
-    }
+      title: "Booksky",
+      description: "E-Book Management System",
+      image: booksky,
+      link: "https://booksky.demo"
+    },
+    
   ];
 
   return (
     <section id="portfolio" className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-white mb-12">
-          My Projects
+            Portfolio
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (

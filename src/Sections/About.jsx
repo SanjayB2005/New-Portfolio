@@ -9,9 +9,13 @@ const About = () => {
         </h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-white leading-relaxed mb-8">
-            I'm a passionate web developer with expertise in modern web technologies.
-            With a strong foundation in both front-end and back-end development,
-            I create engaging and user-friendly digital experiences.
+          I'm a skilled web developer specializing in modern web technologies like React, JavaScript, and CSS.
+          With extensive experience in front-end development and UI/UX principles,
+          I create responsive and accessible web applications that deliver exceptional user experiences.
+          Currently, I'm expanding my expertise into backend development,
+          focusing on Node.js and Express to build full-stack applications.
+          My goal is to combine both front-end and backend skills to develop
+          comprehensive web solutions that solve real-world problems.
           </p>
         </div>
       </div>

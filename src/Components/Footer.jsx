@@ -30,7 +30,7 @@ const Footer = () => {
           </a>
 
           <a
-            href="https://github.com/SanjayB2005"
+            href="https://linkedin.com/in/sanjaybaskaran5"
             target="_blank"
           >
             <i class='bx bxl-linkedin text-3xl'></i>
