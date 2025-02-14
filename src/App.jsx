@@ -1,17 +1,20 @@
-import React, { Fragment } from 'react'
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import Home from './Sections/Home'
-import About from './Sections/About'
-import Skills from './Sections/Skills'
-import Education from './Sections/Education'
-import Portfolio from './Sections/Portfolio'
-import Contact from './Sections/Contact'
-import './App.css'
+import React from 'react';
+import Header from './Components/Header';
+import Home from './Sections/Home';
+import About from './Sections/About';
+import Skills from './Sections/Skills';
+import Education from './Sections/Education';
+import Portfolio from './Sections/Portfolio';
+import Contact from './Sections/Contact';
+import Footer from './Components/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const App = () => {
+AOS.init();
+
+function App() {
   return (
-    <Fragment>
+    <div className="bg-secondary min-h-screen">
       <Header />
       <Home />
       <About />
@@ -20,8 +23,8 @@ const App = () => {
       <Portfolio />
       <Contact />
       <Footer />
-    </Fragment>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;

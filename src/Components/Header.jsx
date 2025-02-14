@@ -1,60 +1,52 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react';
 
 const Header = () => {
-  useEffect(() => {
-    const showMenu = (toggleId, navId) => {
-      const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId)
-
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          nav.classList.toggle('show')
-        })
-      }
-    }
-
-    showMenu('nav_toggle', 'nav_menu')
-
-    const navLink = document.querySelectorAll('.nav_link')
-
-    function linkAction() {
-      navLink.forEach(n => n.classList.remove('active'))
-      this.classList.add('active')
-
-      const navMenu = document.getElementById('nav_menu')
-      navMenu.classList.remove('show')
-    }
-
-    navLink.forEach(n => n.addEventListener('click', linkAction))
-
-    return () => {
-      navLink.forEach(n => n.removeEventListener('click', linkAction))
-    }
-  }, [])
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="header">
-      <nav className="nav bd_grid">
-        <div>
-          <a href="#" className="nav_logo">Sanjay</a>
+    <header className="fixed w-full bg-secondary shadow-lg z-50">
+      <nav className="container mx-auto px-6 py-3">
+        <div className="flex items-center justify-between">
+          <div className="text-white text-xl font-bold">Portfolio</div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                {isOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
+
+          {/* Desktop menu */}
+          <div className="hidden md:flex space-x-8">
+            <a href="#home" className="text-white hover:text-primary transition">Home</a>
+            <a href="#about" className="text-white hover:text-primary transition">About</a>
+            <a href="#skills" className="text-white hover:text-primary transition">Skills</a>
+            <a href="#education" className="text-white hover:text-primary transition">Education</a>
+            <a href="#portfolio" className="text-white hover:text-primary transition">Portfolio</a>
+            <a href="#contact" className="text-white hover:text-primary transition">Contact</a>
+          </div>
         </div>
 
-        <div className="nav_menu" id="nav_menu">
-          <ul className="nav_list">
-            <li className="nav_items"><a href="#home" className="nav_link active">Home</a></li>
-            <li className="nav_items"><a href="#about" className="nav_link">About</a></li>
-            <li className="nav_items"><a href="#skills" className="nav_link">Skills</a></li>
-            <li className="nav_items"><a href="#work" className="nav_link">Work</a></li>
-            <li className="nav_items"><a href="#contact" className="nav_link">Contact</a></li>
-          </ul>
-        </div>
-
-        <div className="nav_toggle" id="nav_toggle">
-          <i className='bx bx-menu'></i>
-        </div>
+        {/* Mobile menu */}
+        {isOpen && (
+          <div className="md:hidden mt-4">
+            <a href="#home" className="block text-white py-2">Home</a>
+            <a href="#about" className="block text-white py-2">About</a>
+            <a href="#skills" className="block text-white py-2">Skills</a>
+            <a href="#education" className="block text-white py-2">Education</a>
+            <a href="#portfolio" className="block text-white py-2">Portfolio</a>
+            <a href="#contact" className="block text-white py-2">Contact</a>
+          </div>
+        )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
