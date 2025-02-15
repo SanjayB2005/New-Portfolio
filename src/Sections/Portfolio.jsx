@@ -33,7 +33,7 @@ const Portfolio = () => {
       title: "Booksky",
       description: "E-Book Management System",
       image: booksky,
-      link: "https://booksky.demo"
+      link: "https://sanjayb2005.github.io/Booksky/"
     },
     
   ];
